@@ -8,7 +8,7 @@ final_prediction = np.loadtxt('marine106.rsp',skiprows=561,usecols=6)
 
 # 计算残差
 # initial_residual = analytical_solution / initial_prediction
-# final_residual = analytical_solution / final_prediction
+# final_residual = analytical_solution / final_prediction 
 initial_residual = analytical_solution - initial_prediction
 final_residual = analytical_solution - final_prediction
 
