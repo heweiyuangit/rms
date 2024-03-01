@@ -7,8 +7,10 @@ initial_prediction = np.loadtxt('marine000.rsp',skiprows=560,usecols=6)
 final_prediction = np.loadtxt('marine106.rsp',skiprows=561,usecols=6)  
 
 # 计算残差
-initial_residual = analytical_solution / initial_prediction
-final_residual = analytical_solution / final_prediction
+# initial_residual = analytical_solution / initial_prediction
+# final_residual = analytical_solution / final_prediction
+initial_residual = analytical_solution - initial_prediction
+final_residual = analytical_solution - final_prediction
 
 # 计算归一化残差
 initial_residual_normalized = initial_residual  / np.sqrt(np.mean(initial_residual ** 2))
